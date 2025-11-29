@@ -1,0 +1,33 @@
+function validateForm() {
+    let name = document.regForm.name.value;
+    let pwd = document.regForm.pwd.value;
+    let email = document.regForm.email.value;
+    let phone = document.regForm.phone.value;
+
+    // Name validation
+    if (!/^[A-Za-z]{6,}$/.test(name)) {
+        alert("Name must contain alphabets and be at least 6 characters.");
+        return false;
+    }
+
+    // Password
+    if (pwd.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return false;
+    }
+
+    // Email validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Enter a valid email address.");
+        return false;
+    }
+
+    // Phone validation
+    if (!/^\d{10}$/.test(phone)) {
+        alert("Phone number must be 10 digits.");
+        return false;
+    }
+
+    return true;
+}\

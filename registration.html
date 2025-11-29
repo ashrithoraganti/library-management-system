@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+<h2>Registration Form</h2>
+
+<form name="regForm" onsubmit="return validateForm()" method="post" action="register.php">
+
+Name: <input type="text" name="name"><br><br>
+Password: <input type="password" name="pwd"><br><br>
+Email ID: <input type="text" name="email"><br><br>
+Phone: <input type="text" name="phone"><br><br>
+
+Sex:
+<input type="radio" name="sex" value="Male">Male
+<input type="radio" name="sex" value="Female">Female
+<br><br>
+
+
+
+Languages:
+<input type="checkbox" name="lang" value="English">English
+<input type="checkbox" name="lang" value="Telugu">Telugu
+<input type="checkbox" name="lang" value="Hindi">Hindi
+<input type="checkbox" name="lang" value="Tamil">Tamil
+<br><br>
+
+Address:<br>
+<textarea rows="4" cols="30"></textarea>
+<br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
